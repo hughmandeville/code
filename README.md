@@ -5,6 +5,7 @@ Code is a series of cryptography puzzles. It is a React app.
 # Running Locally
 
 ```
+npm install
 npm start
 ```
 
