@@ -50,7 +50,9 @@ const Level = ({ level, levels, setLevel }) => {
         showHint={showHint}
         setShowHint={setShowHint}
       />
-      <div id="title">{image ? <img src={image} /> : title}</div>
+      <div id="title" alt="">
+        {image ? <img src={image} /> : title}
+      </div>
       <div id="hint">{showHint ? <span>{hint}</span> : ""}</div>
       <div id="boxes">
         {puzzle.slice(0, completed).map((n, i) => (

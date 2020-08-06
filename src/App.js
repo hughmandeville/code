@@ -12,16 +12,40 @@ const App = () => {
 function getLevels() {
   return [
     {
+      name: "roman_numerals",
+      puzzle: randSlice(
+        [
+          "I",
+          "II",
+          "III",
+          "IV",
+          "V",
+          "VI",
+          "VII",
+          "VIII",
+          "IX",
+          "X",
+          "XI",
+          "XII",
+          "XIII",
+          "XIV",
+        ],
+        6
+      ),
+      hint: "togas",
+      completed: 4,
+    },
+    {
       name: "square",
       puzzle: randSlice([1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144], 6),
       hint: "square",
       completed: 3,
     },
     {
-      name: "rgb",
-      image: "img_red.png",
-      puzzle: ["FF", "00", "00"],
-      hint: "RGB",
+      name: "morse",
+      puzzle: ["S", "O", "S"],
+      inlay: ["...", "---", "..."],
+      hint: "telegraph",
       completed: 0,
     },
     {
@@ -60,13 +84,6 @@ function getLevels() {
       completed: 0,
     },
     {
-      name: "morse",
-      puzzle: ["S", "O", "S"],
-      inlay: ["...", "---", "..."],
-      hint: "telegraph",
-      completed: 0,
-    },
-    {
       name: "olavtine",
       puzzle: ["O", "L", "A", "V", "T", "I", "N", "E"],
       inlay: ["B", "I", "N", "Y", "G", "V", "A", "R"],
@@ -94,28 +111,11 @@ function getLevels() {
       completed: 4,
     },
     {
-      name: "roman_numerals",
-      puzzle: randSlice(
-        [
-          "I",
-          "II",
-          "III",
-          "IV",
-          "V",
-          "VI",
-          "VII",
-          "VIII",
-          "IX",
-          "X",
-          "XI",
-          "XII",
-          "XIII",
-          "XIV",
-        ],
-        6
-      ),
-      hint: "togas",
-      completed: 4,
+      name: "rgb",
+      image: "img_red.png",
+      puzzle: ["FF", "00", "00"],
+      hint: "RGB",
+      completed: 0,
     },
     {
       name: "fibonacci",
