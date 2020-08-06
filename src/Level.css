@@ -1,0 +1,92 @@
+#title {
+  margin: 100px auto 20px auto;
+  text-align: center;
+  vertical-align: middle;
+  color: #757575;
+  font-size: 28px;
+  height: 32px;
+}
+#title img {
+  height: 50px;
+}
+#hint {
+  margin: 20px auto 80px auto;
+  text-align: center;
+  vertical-align: middle;
+  color: #9e9e9e;
+  font-size: 32px;
+  height: 32px;
+}
+
+#boxes {
+  margin: 40px auto;
+  text-align: center;
+  vertical-align: middle;
+}
+.box,
+.input {
+  display: inline-block;
+  font-size: 48px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 5px;
+}
+.input_box {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+.box,
+.input {
+  background: #333333;
+  border: 1px solid #424242;
+  color: #33ff33;
+  font-family: "nyt-franklin", "Helvetica Neue", garamond, helvetica, sans serif;
+  border-radius: 10px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input {
+  border: 1px solid #ff1744;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.next_text {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-top: -70px;
+  font-size: 18px;
+  color: #33ff33;
+  vertical-align: top;
+}
+
+#boxes.won {
+  font-size: 48px;
+}
+
+.inlay {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin-top: -136px;
+  margin-left: 10px;
+  vertical-align: top;
+  color: #9e9e9e;
+}
+.input_box .inlay {
+  margin-top: -101px;
+  margin-left: 15px;
+}

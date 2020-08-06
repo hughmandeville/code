@@ -1,0 +1,19 @@
+#lock {
+  font-size: 48px;
+}
+#lock_box {
+  display: inline-block;
+  font-size: 48px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 5px;
+  color: #757575;
+  cursor: pointer;
+  vertical-align: top;
+}
+#lock.open {
+  color: #33ff33;
+}

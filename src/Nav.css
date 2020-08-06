@@ -1,0 +1,58 @@
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 12px 20px;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(255, 255, 255, 0);
+  color: #9e9e9e;
+  font-weight: 300;
+  font-family: "nyt-karnak-display-130124", "Helvetica Neue", garamond,
+    helvetica, sans serif;
+  width: 100%;
+  z-index: 10;
+}
+
+#nav a:hover {
+  color: #33ff33;
+}
+
+#level,
+#hint_button {
+  display: inline-block;
+  font-family: "nyt-franklin", "Helvetica Neue", garamond, helvetica, sans serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #757575;
+}
+#level {
+  margin-left: 20px;
+  vertical-align: top;
+}
+#hint_button {
+  position: fixed;
+  right: 20px;
+  top: 13px;
+  cursor: pointer;
+}
+
+#completion_line {
+  position: fixed;
+  left: 0;
+  top: 40px;
+  border-bottom: 1px solid #33ff33;
+}
+
+#cheat {
+  display: inline-block;
+  margin-left: 20px;
+  color: #616161;
+  cursor: pointer;
+  font-weight: 700;
+  vertical-align: top;
+}
+#cheat:hover {
+  color: #33ff33;
+}
