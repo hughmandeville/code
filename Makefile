@@ -11,6 +11,11 @@ help:
 build:
 	npm run build
 
+.PHONY: deploy
+## deploy: deploy to GitHub
+deploy: build
+	npx gh-pages -d build
+
 .PHONY: run
 ## run: start app
 run:
