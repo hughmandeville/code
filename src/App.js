@@ -104,6 +104,13 @@ function getLevels() {
       completed: 1,
     },
     {
+      name: "rgb",
+      image: "/code/img_red.png",
+      puzzle: ["FF", "00", "00"],
+      hint: "RGB",
+      completed: 0,
+    },
+    {
       name: "phone",
       puzzle: [7, 8, 6, 4, 6, 4],
       inlay: ["Q", "U", "O", "H", "O", "G"],
@@ -115,13 +122,6 @@ function getLevels() {
       puzzle: ["🙂", "🙃", "🙂", "🙃", "🙂", "🙃"],
       hint: "cut copy",
       completed: 4,
-    },
-    {
-      name: "rgb",
-      image: "img_red.png",
-      puzzle: ["FF", "00", "00"],
-      hint: "RGB",
-      completed: 0,
     },
     {
       name: "fibonacci",
@@ -204,7 +204,7 @@ function getLevels() {
     },
     {
       name: "lost",
-      image: "img_lost.jpg",
+      image: "/code/img_lost.jpg",
       puzzle: ["4", "8", "15", "16", "23", "42"],
       hint: "TV show from mid 2000s",
       completed: 4,
