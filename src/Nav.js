@@ -15,7 +15,7 @@ const Nav = ({
     return (
       <>
         <nav id="nav">
-          <a href="/">Code</a>
+          <a href="{this.props.route.path}">Code</a>
         </nav>
         <div id="completion_line" style={{ width: "100%" }}></div>
       </>
