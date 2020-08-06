@@ -24,7 +24,7 @@ const Nav = ({
   return (
     <>
       <nav id="nav">
-        <a href="/">Code</a>
+        <a href="{this.props.route.path}">Code</a>
         <div id="level">
           Level {level + 1} / {levels.length}
         </div>
