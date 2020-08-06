@@ -35,7 +35,7 @@ const Lock = ({
         }}
       >
         <span id="lock" className="material-icons open">
-          lock
+          lock_open
         </span>
         <div className="next_text">next&nbsp;&gt;&gt;</div>
       </div>
