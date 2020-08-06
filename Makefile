@@ -14,7 +14,7 @@ build:
 .PHONY: deploy
 ## deploy: deploy to GitHub
 deploy: build
-	npx gh-pages -d build
+	npm run deploy
 
 .PHONY: run
 ## run: start app
