@@ -15,7 +15,7 @@ const Nav = ({
     return (
       <>
         <nav id="nav">
-          <a href="{this.props.route.path}">Code</a>
+          <a href={window.location.pathname}>Code</a>
         </nav>
         <div id="completion_line" style={{ width: "100%" }}></div>
       </>
@@ -24,7 +24,7 @@ const Nav = ({
   return (
     <>
       <nav id="nav">
-        <a href="{this.props.route.path}">Code</a>
+        <a href={window.location.pathname}>Code</a>
         <div id="level">
           Level {level + 1} / {levels.length}
         </div>
