@@ -35,7 +35,9 @@ const Level = ({ level, levels, setLevel }) => {
         />
         <div id="title">🤓 🤪 🤓 🤪 🤓 🤪 🤓</div>
         <div id="boxes" className="won">
-          Congratulations you completed all the challenges!
+          Congratulations!
+          <br />
+          You completed all the challenges!
         </div>
       </>
     );
