@@ -128,6 +128,14 @@ const handleInputChange = (
     inputRefs[i].current.value.toUpperCase()
   ) {
     states[i] = "correct";
+    const findIncorrect = inputRefs.findIndex(
+      (input, i) => states[i] !== "correct"
+    );
+    if (findIncorrect !== -1) {
+      inputRefs[findIncorrect].current.focus();
+    } else {
+      inputRefs.forEach((input) => input.current.blur());
+    }
   } else {
     states[i] = "incorrect";
   }
