@@ -1,6 +1,8 @@
 # Code
 
-Code is a series of cryptography puzzles. It is a React app.
+Code is a series of cryptography puzzles. It is React app that is deployed to GitHub pages.
+
+https://hughmandeville.github.io/code/
 
 # Running Locally
 
