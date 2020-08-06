@@ -63,17 +63,17 @@ function getLevels() {
       completed: 0,
     },
     {
+      name: "baked",
+      title: "Baked in Cockney",
+      puzzle: ["Q", "U", "E", "E", "N"],
+      hint: "Baked Bean",
+      completed: 0,
+    },
+    {
       name: "barney",
       title: "Barney in Cockney",
       puzzle: ["T", "R", "O", "U", "B", "L", "E"],
       hint: "Barney Rubble",
-      completed: 0,
-    },
-    {
-      name: "brad",
-      title: "Brad in Cockney",
-      puzzle: ["S", "H", "I", "T"],
-      hint: "Brad Pitt",
       completed: 0,
     },
     {
@@ -196,6 +196,7 @@ function getLevels() {
       hint: "months",
       completed: 4,
     },
+    /*
     {
       name: "atbash",
       puzzle: ["B", "U", "P", "K", "I", "S"],
@@ -209,6 +210,7 @@ function getLevels() {
       hint: "timber",
       completed: 4,
     },
+    */
   ];
 }
 
