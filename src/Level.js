@@ -70,7 +70,7 @@ const Level = ({ level, levels, setLevel }) => {
           return (
             <div key={"box" + (completed + i)} className="input_box">
               <input
-                key={"level" + level + "-input" + i}
+                key={"level" + level + "-input" + (completed + i)}
                 ref={newRef}
                 style={
                   inputStates.length >= i && inputStates[i] === "correct"
@@ -141,19 +141,16 @@ const handleInputChange = (
   }
   setInputStates(states);
 
-  let solved = false;
+  let trues = 0;
   if (states.length === puzzle.length - completed) {
-    solved = states.reduce(function (accumulator, state) {
-      if (accumulator === false) {
-        return false;
-      }
+    trues = states.reduce(function (accumulator, state) {
       if (state === "correct") {
-        return true;
+        return accumulator + 1;
       }
-      return false;
-    }, true);
+      return accumulator;
+    }, 0);
   }
-  if (solved) {
+  if (trues === puzzle.length - completed) {
     setLockStatus("unlocked");
   } else {
     setLockStatus("locked");
