@@ -9,7 +9,12 @@ const Timer = () => {
     }, 1000);
     return () => clearInterval(interval);
   }, []);
-  return <footer id="timer">{seconds}s</footer>;
+  return (
+    <footer id="timer">
+      {Math.floor(seconds / 60)}.{seconds % 60 < 10 ? "0" : ""}
+      {seconds % 60}
+    </footer>
+  );
 };
 
 export default Timer;

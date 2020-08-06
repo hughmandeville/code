@@ -202,6 +202,13 @@ function getLevels() {
       hint: "months",
       completed: 4,
     },
+    {
+      name: "lost",
+      image: "img_lost.jpg",
+      puzzle: ["4", "8", "15", "16", "23", "42"],
+      hint: "TV show from mid 2000s",
+      completed: 4,
+    },
     /*
     {
       name: "atbash",
