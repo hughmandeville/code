@@ -4,7 +4,7 @@ Code is a series of cryptography puzzles. It is written in ReactJS and deployed 
 
 https://hughmandeville.github.io/code/
 
-![Game](screenshot.png | width=400)
+![Game](screenshot.png)
 
 # Running Locally
 
