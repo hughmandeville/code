@@ -1,7 +1,8 @@
 import React, { createRef, useState, useEffect } from "react";
 import "./Level.css";
-import Nav from "./Nav";
 import Lock from "./Lock";
+import Nav from "./Nav";
+import Timer from "./Timer";
 
 const Level = ({ level, levels, setLevel }) => {
   const levelData =
@@ -12,6 +13,7 @@ const Level = ({ level, levels, setLevel }) => {
   const [showHint, setShowHint] = useState(0);
   const [lockStatus, setLockStatus] = useState("locked");
   const [inputStates, setInputStates] = useState([]);
+  const [isActive, setIsActive] = useState(true);
   const inputRefs = [];
   const { hint, image, title } = levelData;
 
@@ -28,17 +30,23 @@ const Level = ({ level, levels, setLevel }) => {
           level={level}
           levels={levels}
           setInputStates={setInputStates}
+          setIsActive={setIsActive}
           setLevel={setLevel}
           setLockStatus={setLockStatus}
           showHint={showHint}
           setShowHint={setShowHint}
         />
-        <div id="title">🤓 🤪 🤓 🤪 🤓 🤪 🤓</div>
+        <div id="title">
+          <span role="img" aria-label="smiley">
+            🤓 🤪 🤓 🤪 🤓 🤪 🤓
+          </span>
+        </div>
         <div id="boxes" className="won">
           Congratulations!
           <br />
           You completed all the challenges!
         </div>
+        <Timer isActive={isActive} />
       </>
     );
   }
@@ -48,6 +56,7 @@ const Level = ({ level, levels, setLevel }) => {
         level={level}
         levels={levels}
         setInputStates={setInputStates}
+        setIsActive={setIsActive}
         setLevel={setLevel}
         setLockStatus={setLockStatus}
         showHint={showHint}
@@ -89,6 +98,7 @@ const Level = ({ level, levels, setLevel }) => {
                     inputStates,
                     puzzle,
                     setInputStates,
+                    setIsActive,
                     setLockStatus
                   );
                 }}
@@ -105,10 +115,12 @@ const Level = ({ level, levels, setLevel }) => {
           level={level}
           lockStatus={lockStatus}
           setInputStates={setInputStates}
+          setIsActive={setIsActive}
           setLevel={setLevel}
           setLockStatus={setLockStatus}
           setShowHint={setShowHint}
         ></Lock>
+        <Timer isActive={isActive} />
       </div>
     </>
   );
@@ -122,6 +134,7 @@ const handleInputChange = (
   inputStates,
   puzzle,
   setInputStates,
+  setIsActive,
   setLockStatus
 ) => {
   const states = [...inputStates];
@@ -153,8 +166,10 @@ const handleInputChange = (
     }, 0);
   }
   if (trues === puzzle.length - completed) {
+    setIsActive(false);
     setLockStatus("unlocked");
   } else {
+    setIsActive(true);
     setLockStatus("locked");
   }
 };
@@ -163,6 +178,7 @@ const handleInputChange = (
 export const GotoNextLevel = (
   level,
   setInputStates,
+  setIsActive,
   setLevel,
   setLockStatus,
   setShowHint
@@ -171,6 +187,7 @@ export const GotoNextLevel = (
   setShowHint(0);
   setLevel(level + 1);
   setInputStates([]);
+  setIsActive(true);
 };
 
 export default Level;

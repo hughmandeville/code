@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import Level from "./Level";
-import Timer from "./Timer";
 import "./index.css";
 
 const App = () => {
   const levels = getLevels();
   const [level, setLevel] = useState(0);
-  return (
-    <>
-      <Level level={level} levels={levels} setLevel={setLevel} />
-      <Timer />
-    </>
-  );
+
+  return <Level level={level} levels={levels} setLevel={setLevel} />;
 };
 
 // construct array of levels.

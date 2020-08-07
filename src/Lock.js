@@ -7,6 +7,7 @@ const Lock = ({
   level,
   lockStatus,
   setInputStates,
+  setIsActive,
   setLevel,
   setLockStatus,
   setShowHint,
@@ -28,6 +29,7 @@ const Lock = ({
           GotoNextLevel(
             level,
             setInputStates,
+            setIsActive,
             setLevel,
             setLockStatus,
             setShowHint

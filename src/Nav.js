@@ -6,6 +6,7 @@ const Nav = ({
   level,
   levels,
   setInputStates,
+  setIsActive,
   setLevel,
   setLockStatus,
   setShowHint,
@@ -34,6 +35,7 @@ const Nav = ({
             GotoNextLevel(
               level,
               setInputStates,
+              setIsActive,
               setLevel,
               setLockStatus,
               setShowHint
