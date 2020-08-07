@@ -1,8 +1,10 @@
 # Code
 
-Code is a series of cryptography puzzles. It is React app that is deployed to GitHub pages.
+Code is a series of cryptography puzzles. It is written in ReactJS and deployed to GitHub pages.
 
 https://hughmandeville.github.io/code/
+
+![Game](screenshot.png
 
 # Running Locally
 
@@ -14,9 +16,10 @@ npm start
 # Puzzles
 
 There are different types of puzzzles.
-Some puzzles are sequences of numbers or letters the user has to complete (Fibonacci, Pi, days of the week, ...).
-Some puzzles are encrypted or encoded messages the use has to decrypt or decode (ROT13, Morse Code, ...).
-There are also word phrases to complete (Pig Latin, Cockney sayings, ...).
+
+- _Sequences_ Sequences of numbers or letters (e.g. Fibonacci, Pi, days of the week.
+- _Encoded Messages_ Encrypted or encoded messages (e.g. ROT13, Morse Code, Pig Latin).
+- _Phrases_ - Word phrases (e.g. Cockney sayings).
 
 # Other Puzzle Idea
 
