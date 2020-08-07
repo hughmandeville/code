@@ -23,43 +23,16 @@ const Level = ({ level, levels, setLevel }) => {
     }
   }, [inputStates]);
 
-  if (level === levels.length) {
-    return (
-      <>
-        <Nav
-          level={level}
-          levels={levels}
-          setInputStates={setInputStates}
-          setIsActive={setIsActive}
-          setLevel={setLevel}
-          setLockStatus={setLockStatus}
-          showHint={showHint}
-          setShowHint={setShowHint}
-        />
-        <div id="title">
-          <span role="img" aria-label="smiley">
-            🤓 🤪 🤓 🤪 🤓 🤪 🤓
-          </span>
-        </div>
-        <div id="boxes" className="won">
-          Congratulations!
-          <br />
-          You completed all the challenges!
-        </div>
-        <Timer isActive={isActive} />
-      </>
-    );
-  }
   return (
     <>
       <Nav
         level={level}
         levels={levels}
+        lockStatus={lockStatus}
         setInputStates={setInputStates}
         setIsActive={setIsActive}
         setLevel={setLevel}
         setLockStatus={setLockStatus}
-        showHint={showHint}
         setShowHint={setShowHint}
       />
       <div id="title">{image ? <img src={image} alt={title} /> : title}</div>
@@ -96,6 +69,8 @@ const Level = ({ level, levels, setLevel }) => {
                     i,
                     inputRefs,
                     inputStates,
+                    level,
+                    levels,
                     puzzle,
                     setInputStates,
                     setIsActive,
@@ -113,6 +88,7 @@ const Level = ({ level, levels, setLevel }) => {
         })}
         <Lock
           level={level}
+          levels={levels}
           lockStatus={lockStatus}
           setInputStates={setInputStates}
           setIsActive={setIsActive}
@@ -132,6 +108,8 @@ const handleInputChange = (
   i,
   inputRefs,
   inputStates,
+  level,
+  levels,
   puzzle,
   setInputStates,
   setIsActive,
@@ -177,6 +155,7 @@ const handleInputChange = (
 // Go to next level.
 export const GotoNextLevel = (
   level,
+  levels,
   setInputStates,
   setIsActive,
   setLevel,
@@ -185,9 +164,14 @@ export const GotoNextLevel = (
 ) => {
   setLockStatus("locked");
   setShowHint(0);
-  setLevel(level + 1);
   setInputStates([]);
-  setIsActive(true);
+  if (level < levels.length - 1) {
+    setIsActive(true);
+    setLevel(level + 1);
+  } else {
+    // Shouldn't reach here
+    setIsActive(false);
+  }
 };
 
 export default Level;

@@ -5,6 +5,7 @@ import "./Lock.css";
 
 const Lock = ({
   level,
+  levels,
   lockStatus,
   setInputStates,
   setIsActive,
@@ -20,6 +21,18 @@ const Lock = ({
         </span>
       </div>
     );
+  } else if (level === levels.length - 1) {
+    // FINISHED
+    return (
+      <div className="finished">
+        <span role="img" aria-label="smiley" className="exclamation">
+          🤓 🤪 🤓 😝 🤓 🤪 🤓
+        </span>
+        <br />
+        <div className="exclamation">Congratulations!</div>
+        You completed all the challenges!
+      </div>
+    );
   } else {
     return (
       <div
@@ -28,6 +41,7 @@ const Lock = ({
         onClick={() => {
           GotoNextLevel(
             level,
+            levels,
             setInputStates,
             setIsActive,
             setLevel,

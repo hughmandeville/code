@@ -17,3 +17,11 @@
 #lock.open {
   color: #33ff33;
 }
+.finished {
+  margin-top: 20px;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+.finished .exclamation {
+  font-size: 48px;
+}

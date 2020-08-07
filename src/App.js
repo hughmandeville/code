@@ -4,6 +4,7 @@ import "./index.css";
 
 const App = () => {
   const levels = getLevels();
+  //const levels = getLevels().slice(0, 2);  // Debug with fewer puzzles.
   const [level, setLevel] = useState(0);
 
   return <Level level={level} levels={levels} setLevel={setLevel} />;
@@ -37,17 +38,17 @@ function getLevels() {
       completed: 4,
     },
     {
-      name: "square",
-      puzzle: randSlice([1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144], 6),
-      hint: "square",
-      completed: 3,
-    },
-    {
       name: "morse",
       puzzle: ["S", "O", "S"],
       inlay: ["...", "---", "..."],
       hint: "telegraph",
       completed: 0,
+    },
+    {
+      name: "square",
+      puzzle: randSlice([1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144], 6),
+      hint: "square",
+      completed: 3,
     },
     {
       name: "amscray",

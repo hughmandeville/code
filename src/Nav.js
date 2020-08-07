@@ -5,6 +5,7 @@ import "./Nav.css";
 const Nav = ({
   level,
   levels,
+  lockStatus,
   setInputStates,
   setIsActive,
   setLevel,
@@ -12,7 +13,7 @@ const Nav = ({
   setShowHint,
 }) => {
   const percentComplete = Math.round((level / levels.length) * 100) + "%";
-  if (level === levels.length) {
+  if (level === levels.length - 1 && lockStatus === "unlocked") {
     return (
       <>
         <nav id="nav">
@@ -34,6 +35,7 @@ const Nav = ({
           onClick={() => {
             GotoNextLevel(
               level,
+              levels,
               setInputStates,
               setIsActive,
               setLevel,
