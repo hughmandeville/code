@@ -4,7 +4,7 @@ Code is a series of cryptography puzzles. It is written in ReactJS and deployed 
 
 https://hughmandeville.github.io/code/
 
-![Game](screenshot.png)
+![Game](screenshot.png | width=400)
 
 # Running Locally
 
@@ -15,11 +15,12 @@ npm start
 
 # Puzzles
 
-There are different types of puzzzles.
+There are different types of puzzles:
 
-- _Sequences_ Sequences of numbers or letters (e.g. Fibonacci, Pi, days of the week.
-- _Encoded Messages_ Encrypted or encoded messages (e.g. ROT13, Morse Code, Pig Latin).
-- _Phrases_ - Word phrases (e.g. Cockney sayings).
+- **Sequences** - Sequences of numbers or letters (e.g. Fibonacci, Pi, days of the week).
+- **Encoded Messages** - Encrypted or encoded messages (e.g. ROT13, Morse Code, Pig Latin).
+- **Phrases** - Word phrases (e.g. Cockney sayings).
+- **Pictures** - Picture based clues (e.g. red box).
 
 # Other Puzzle Idea
 
